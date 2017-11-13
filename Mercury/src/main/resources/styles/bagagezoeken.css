@@ -4,4 +4,10 @@
 
 .mainFxmlClass {
 
+    .button#terugBTN{
+    -fx-background-color: #6db93f;
+    /*-fx-text-alignment: center;*/
+    -fx-border-color: #000000;
+    -fx-border-radius: 5px;
+    }
 }

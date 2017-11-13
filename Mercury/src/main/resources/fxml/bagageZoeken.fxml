@@ -106,14 +106,14 @@
                   <Label text="Locatie gevonden:" GridPane.columnIndex="4" GridPane.rowIndex="2" />
                   <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="130.0" text="Stad passagier:" GridPane.columnIndex="4" GridPane.rowIndex="3" />
                   <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="172.0" text="Size (cm):" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <TextField GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                  <TextField GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="6" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                  <TextField GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                  <TextField id="bagageNr" fx:id="bagageNr" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField id="merk" fx:id="merk" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField id="naamPassagier" fx:id="naamPassagier" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <TextField id="gewicht" fx:id="gewicht" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <TextField id="vluchtNr" fx:id="vluchtNr" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <TextField id="locatie" fx:id="locatie" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                  <TextField id="stadPassagier" fx:id="stadPassagier" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                  <TextField id="size" fx:id="size" GridPane.columnIndex="6" GridPane.rowIndex="4" />
                </children>
             </GridPane>
          </children>

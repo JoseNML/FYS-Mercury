@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="1098.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Pane id="header" prefHeight="61.0" prefWidth="1098.0" style="-fx-background-color: #d81e05;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="21.0" layoutY="16.0" text="Zoeken">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="196.0" minHeight="0.0" prefHeight="58.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="489.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="500.0" minHeight="10.0" prefHeight="487.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Resultaten voor:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #d81e05;" GridPane.rowIndex="1" />
+            <TableView prefHeight="332.0" prefWidth="858.0" GridPane.rowIndex="2">
+              <columns>
+                <TableColumn id="registratieNrColumn" fx:id="registratieNrColumn" prefWidth="98.0" text="Registratie nr" />
+                <TableColumn id="typeBagageColumn" fx:id="typeBagageColumn" prefWidth="99.0" text="Type bagage" />
+                  <TableColumn id="merkColumn" fx:id="merkColumn" prefWidth="59.0" text="Merk" />
+                  <TableColumn id="vluchtColumn" fx:id="vluchtColumn" prefWidth="59.0" text="Vlucht" />
+                  <TableColumn id="bagageNrColumn" fx:id="bagageNrColumn" prefWidth="95.0" text="Bagage nr" />
+                  <TableColumn id="locatieColumn" fx:id="locatieColumn" prefWidth="87.0" text="Locatie" />
+                  <TableColumn id="kleur1Column" fx:id="kleur1Column" prefWidth="74.0" text="Kleur 1" />
+                  <TableColumn id="kleur2Column" fx:id="kleur2Column" prefWidth="82.0" text="Kleur 2" />
+                  <TableColumn id="maatColumn" prefWidth="66.0" text="Maat" />
+                  <TableColumn id="gewichtColumn" fx:id="gewichtColumn" prefWidth="70.0" text="Gewicht" />
+                  <TableColumn fx:id="infoPassagierColumn" prefWidth="153.0" text="Naam, stad passagier" />
+                  <TableColumn id="overigeColumn" fx:id="overigeColumn" minWidth="0.0" prefWidth="155.0" text="Overige kenmerken" />
+              </columns>
+            </TableView>
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <HBox prefHeight="43.0" prefWidth="1098.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="158.0">
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="10.0" prefWidth="13.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="129.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="47.0" minWidth="10.0" prefWidth="27.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="18.0" minHeight="8.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="26.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="19.0" minHeight="9.0" prefHeight="9.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button id="terugBTN" fx:id="terugBTN" mnemonicParsing="false" prefHeight="27.0" prefWidth="112.0" stylesheets="@../styles/bagageresultaten.css" text="Terug" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="169.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="199.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="61.0" minWidth="10.0" prefWidth="49.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="114.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="35.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="10.0" minHeight="4.0" prefHeight="4.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="19.0" minHeight="7.0" prefHeight="7.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button id="bewerkBTN" fx:id="bewerkBTN" mnemonicParsing="false" prefHeight="27.0" prefWidth="118.0" text="Bewerken" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children></HBox>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
