@@ -4,10 +4,13 @@
 
 .mainFxmlClass {
 
-    .button#terugBTN{
+.button#zoekenBTN{
     -fx-background-color: #6db93f;
-    /*-fx-text-alignment: center;*/
+    -fx-text-alignment: left;
     -fx-border-color: #000000;
     -fx-border-radius: 5px;
-    }
+}
+.button#zoekenBTN:hover{
+    -fx-background-color: #2eb82e;
+}
 }

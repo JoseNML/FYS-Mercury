@@ -136,7 +136,7 @@
               </rowConstraints>
                <children>
                   <Button id="annuleerBTN" fx:id="annuleerBTN" mnemonicParsing="false" prefHeight="30.0" prefWidth="104.0" stylesheets="@../styles/registreervermist.css" text="Annuleer" GridPane.columnIndex="1" />
-                  <Button id="opslaanBTN" fx:id="opslaanBTN" mnemonicParsing="false" stylesheets="@../styles/registreervermist.css" text="Opslaan" textFill="WHITE" GridPane.columnIndex="3" />
+                  <Button id="zoekenBTN" fx:id="zoekenBTN" mnemonicParsing="false" onAction="#zoekAction" prefHeight="29.0" prefWidth="93.0" stylesheets="@../styles/bagagezoeken.css" text="Zoeken" textFill="WHITE" GridPane.columnIndex="3" />
                </children>
             </GridPane>
          </children>
