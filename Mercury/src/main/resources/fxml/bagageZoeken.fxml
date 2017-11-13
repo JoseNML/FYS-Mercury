@@ -113,6 +113,7 @@
                   <TextField GridPane.columnIndex="6" GridPane.rowIndex="1" />
                   <TextField GridPane.columnIndex="6" GridPane.rowIndex="2" />
                   <TextField GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                  <TextField GridPane.columnIndex="6" GridPane.rowIndex="4" />
                </children>
             </GridPane>
          </children>
