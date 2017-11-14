@@ -1,4 +1,4 @@
-package hva.fys.mercury;
+package hva.fys.mercury.controllers;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,7 +15,7 @@ import javafx.fxml.Initializable;
  *
  * @author davidbritt
  */
-public class DashboardController implements Initializable {
+public class BagageZoekenController implements Initializable {
 
     /**
      * Initializes the controller class.

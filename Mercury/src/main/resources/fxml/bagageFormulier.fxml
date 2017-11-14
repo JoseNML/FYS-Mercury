@@ -14,7 +14,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<<<<<<< HEAD
 <BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="1098.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hva.fys.mercury.BagageFormulierController">
+=======
+<BorderPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" >
+   <left>
+      <Pane prefHeight="13.0" prefWidth="51.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="13.0" prefWidth="39.0" BorderPane.alignment="CENTER" />
+   </right>
+>>>>>>> origin/TempUML
    <top>
       <Pane prefHeight="31.0" prefWidth="600.0" style="-fx-background-color: #d81e05;" BorderPane.alignment="CENTER">
          <children>

@@ -1,7 +1,42 @@
-/*
- * Empty Stylesheet file.
- */
 
-.mainFxmlClass {
-
+.tab-pane *.tab-header-background {
+    -fx-background-color: WHITE;
 }
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;  
+    -fx-text-fill: WHITE;
+}
+
+.tab-pane .tab:selected{
+    -fx-background-color: #d81e05;
+}
+.miniHeader{
+    -fx-background-color: #d81e05; 
+}  
+.miniHeader#headerLabel{
+    -fx-font-family: "Open Sans";
+    -fx-font-size: 24px; 
+    -fx-font-weight: BOLD ;
+    -fx-font-style: normal; 
+    -fx-text-fill: WHITE;
+}
+
+.statistiekTab{
+    -fx-background-color: WHITE;
+}
+
+.chart-pie.default-color0 {
+-fx-pie-color: #d81e05;
+}
+
+.chart-pie.default-color1 {
+-fx-pie-color: #ffc61f;
+}
+
+.chartTab#chartLabel{
+    -fx-font-family: "Open Sans";
+    -fx-font-size: 24px; 
+    -fx-font-weight: BOLD ;
+    -fx-font-style: normal;  
+}
+
