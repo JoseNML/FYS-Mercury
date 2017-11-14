@@ -21,7 +21,7 @@ public class MainApp extends Application {
         stage.setTitle("Mercury");
         stage.getIcons().add(new Image("/images/corendon_icon.png"));
         // stage.setFullScreen(Boolean.TRUE);
-        stage.setResizable(false);
+        stage.setResizable(true);
         stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
         stage.setScene(scene);
         stage.show();

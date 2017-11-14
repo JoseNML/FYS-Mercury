@@ -111,7 +111,7 @@
                <children>
                   <VBox layoutX="-400.0" layoutY="41.0" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="-400.0" AnchorPane.rightAnchor="-400.0" AnchorPane.topAnchor="41.0">
                      <children>
-                        <GridPane id="greyPane" prefHeight="295.0" prefWidth="1000.0">
+                        <GridPane id="greyPane" prefHeight="295.0" prefWidth="800.0">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

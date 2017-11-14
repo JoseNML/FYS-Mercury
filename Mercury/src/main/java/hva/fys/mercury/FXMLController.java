@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -31,6 +32,9 @@ public class FXMLController implements Initializable {
 
     @FXML
     public BorderPane rootNode;
+    
+    @FXML
+    private Button logOutBtn;
 
     public StackPane getRootWorkSpace() {
         return rootWorkSpace;
@@ -38,7 +42,7 @@ public class FXMLController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        logOutBtn.setVisible(false);
     }
     
     @FXML
@@ -57,7 +61,9 @@ public class FXMLController implements Initializable {
         System.out.println("pane:" + pane);
         System.out.println("rootWorkspace: " + rootWorkSpace);
 
-        String userNameString, passwordString, userPass = "admin";
+        String userNameString, passwordString, userPass = "gebruiker";
+        String userAdminString = "admin";
+        String userManagerString = "manager";
 
         userNameString = userTextField.getText();
         passwordString = passTextField.getText();
@@ -74,6 +80,7 @@ public class FXMLController implements Initializable {
             rootWorkSpace.getChildren().setAll(pane);
             System.out.println("rootworkspace: " + rootWorkSpace);
             System.out.println("rootNode: " + rootNode);
+            logOutBtn.setVisible(true);
 
         } else {
             String content = "Wrong credentials";
