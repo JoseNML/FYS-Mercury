@@ -4,8 +4,7 @@
  * and open the template in the editor.
  */
 package hva.fys.mercury;
-
-import com.sun.corba.se.spi.activation._ActivatorImplBase;
+ 
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;

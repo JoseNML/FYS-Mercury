@@ -61,8 +61,6 @@ public class FXMLController implements Initializable {
         workspace.getChildren().setAll(pane);
     
     }
-    
-       
 
     @FXML
     private void openBagageZoeken(ActionEvent event) {

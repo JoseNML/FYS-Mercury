@@ -27,9 +27,10 @@ public class BagageZoekenController implements Initializable {
     @FXML
     private void zoekAction(ActionEvent event) {
         System.out.println("Opening search results");
-        Parent pane = loadFXMLFile("/fxml/bagageResultaten.fxml");
+        BorderPane pane = (BorderPane) loadFXMLFile("/fxml/bagageResultaten.fxml");
         rootBorderPane.getChildren().clear();
         rootBorderPane.setCenter(pane);
+        pane.setPrefSize(rootBorderPane.getWidth(), rootBorderPane.getPrefHeight());
         
     }
 
