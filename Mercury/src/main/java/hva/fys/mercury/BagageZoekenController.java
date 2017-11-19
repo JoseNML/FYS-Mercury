@@ -13,13 +13,24 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
 
 public class BagageZoekenController implements Initializable {
 
     @FXML
+    private Button zoekenBTN;
+    
+    @FXML
+    private BorderPane rootBorderPane;
+    
+    @FXML
     private void zoekAction(ActionEvent event) {
         System.out.println("Opening search results");
         Parent pane = loadFXMLFile("/fxml/bagageResultaten.fxml");
+        rootBorderPane.getChildren().clear();
+        rootBorderPane.setCenter(pane);
+        
     }
 
     /**

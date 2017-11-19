@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="1098.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="1098.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hva.fys.mercury.BagageResultatenController">
    <top>
       <Pane id="header" prefHeight="61.0" prefWidth="1098.0" style="-fx-background-color: #d81e05;" BorderPane.alignment="CENTER">
          <children>
@@ -41,10 +41,10 @@
                </font>
             </Label>
             <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #d81e05;" GridPane.rowIndex="1" />
-            <TableView prefHeight="332.0" prefWidth="858.0" GridPane.rowIndex="2">
+            <TableView fx:id="table" prefHeight="332.0" prefWidth="858.0" GridPane.rowIndex="2">
               <columns>
-                <TableColumn id="registratieNrColumn" fx:id="registratieNrColumn" prefWidth="98.0" text="Registratie nr" />
-                <TableColumn id="typeBagageColumn" fx:id="typeBagageColumn" prefWidth="99.0" text="Type bagage" />
+                <TableColumn id="registratieNrColumn" fx:id="registratieNrColumn" prefWidth="94.0" text="Registratie nr" />
+                <TableColumn id="typeBagageColumn" fx:id="typeBagageColumn" prefWidth="103.0" text="Type bagage" />
                   <TableColumn id="merkColumn" fx:id="merkColumn" prefWidth="59.0" text="Merk" />
                   <TableColumn id="vluchtColumn" fx:id="vluchtColumn" prefWidth="59.0" text="Vlucht" />
                   <TableColumn id="bagageNrColumn" fx:id="bagageNrColumn" prefWidth="95.0" text="Bagage nr" />
@@ -53,7 +53,7 @@
                   <TableColumn id="kleur2Column" fx:id="kleur2Column" prefWidth="82.0" text="Kleur 2" />
                   <TableColumn id="maatColumn" prefWidth="66.0" text="Maat" />
                   <TableColumn id="gewichtColumn" fx:id="gewichtColumn" prefWidth="70.0" text="Gewicht" />
-                  <TableColumn fx:id="infoPassagierColumn" prefWidth="153.0" text="Naam, stad passagier" />
+                  <TableColumn id="infoPassagierColumn" fx:id="infoPassagierColumn" prefWidth="153.0" text="Naam, stad passagier" />
                   <TableColumn id="overigeColumn" fx:id="overigeColumn" minWidth="0.0" prefWidth="155.0" text="Overige kenmerken" />
               </columns>
             </TableView>
