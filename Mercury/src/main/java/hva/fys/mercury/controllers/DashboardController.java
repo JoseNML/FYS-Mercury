@@ -1,5 +1,6 @@
 package hva.fys.mercury.controllers;
 
+import hva.fys.mercury.services.TableHandler;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -30,7 +31,7 @@ public class DashboardController implements Initializable {
         initializeLineChart();
         initializePieChart();
     }
-
+    
     private void initializeLineChart() { 
         XYChart.Series gevonden = new XYChart.Series();
         gevonden.setName("Gevonden");

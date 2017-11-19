@@ -1,4 +1,4 @@
-package hva.fys.mercury;
+package hva.fys.mercury.controllers;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

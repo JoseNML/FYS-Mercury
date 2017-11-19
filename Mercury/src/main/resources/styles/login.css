@@ -12,3 +12,14 @@
 .button#opslaanBTN:hover{
     -fx-background-color: #2eb82e;
 }
+
+.button#wachtwoordVergeten{
+    -fx-background-color: #fc8f00;
+    -fx-border-color: #000000;
+    -fx-border-radius: 5px;
+}
+
+.button#wachtwoordVergeten:hover{
+    -fx-background-color: #d81e05;
+}
+

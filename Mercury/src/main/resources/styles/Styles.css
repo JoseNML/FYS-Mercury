@@ -22,20 +22,21 @@
     -fx-font-style: normal;   
     -fx-text-fill: white;
 }
-<<<<<<< HEAD
+
 
 #redHbox{
     -fx-background-color: #d81e05; 
     -fx-border-radius: 5px;
     -fx
-=======
+
 #gap{
     
     -fx-background-color: #dddddd; 
     
->>>>>>> origin/TempUML
+
 }
 
 #greyPane {
     -fx-background-color: #c9c9c9;
 }
+

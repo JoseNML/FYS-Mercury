@@ -10,5 +10,10 @@ package hva.fys.mercury.services;
  * @author GG
  */
 public class TableHandler {
+    private String lol2;
+    private int lol;
     
+    private void filltabel(){
+        
+    }
 }

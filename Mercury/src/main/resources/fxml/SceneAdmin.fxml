@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="parentNode" minHeight="600.0" minWidth="900.0" styleClass="base" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hva.fys.mercury.controllers.RootController">
+   <top>
+      <GridPane id="mainHeader" alignment="TOP_CENTER" styleClass="header" stylesheets="@../styles/Styles.css">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1776.0" minWidth="10.0" prefWidth="190.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1776.0" minWidth="10.0" prefWidth="110.66668701171875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1776.0" minWidth="10.0" prefWidth="142.3333282470703" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1776.0" minWidth="10.0" prefWidth="210.33334350585938" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1776.0" minWidth="10.0" prefWidth="24.0" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="1776.0" minWidth="10.0" prefWidth="79.3333740234375" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="950.0" minWidth="10.0" prefWidth="125.6666259765625" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../images/mercury_logo.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="81.0" prefWidth="99.0" spacing="5.0" GridPane.columnIndex="5" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/flag-NL.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/flag-ENG.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="33.0" prefWidth="149.0" spacing="5.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <children>
+                  <Label id="usernameLabel" alignment="BOTTOM_RIGHT" prefHeight="35.0" prefWidth="66.0" styleClass="header" stylesheets="@../styles/Styles.css" text="Admin" textFill="WHITE" />
+                  <ImageView fitHeight="33.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </top>
+   <bottom>
+      <GridPane id="mainFooter" prefHeight="22.0" prefWidth="800.0" styleClass="footer" stylesheets="@../styles/Styles.css" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label id="dateTime" fx:id="dateTime" styleClass="footer" stylesheets="@../styles/Styles.css" text="5 November , 2017, 8:15:30 " />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </GridPane>
+   </bottom>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="24.0" prefWidth="532.0" styleClass="navigationBar" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Dashboard &gt; ..." />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </HBox>
+         </top>
+         <center>
+            <StackPane fx:id="workspace" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Scene" wrappingWidth="733.4267578125">
+                     <font>
+                        <Font size="85.0" />
+                     </font></Text>
+               </children></StackPane>
+         </center>
+         <left>
+            <VBox id="gap" prefHeight="514.0" prefWidth="6.0" BorderPane.alignment="CENTER" />
+         </left></BorderPane>
+   </center>
+</BorderPane>

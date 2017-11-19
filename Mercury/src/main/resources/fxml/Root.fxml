@@ -21,7 +21,7 @@
 
 <!--import controllers-->
 
-<BorderPane fx:id="rootNode" minHeight="1000.0" minWidth="1400.0" styleClass="base" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hva.fys.mercury.FXMLController">
+<BorderPane fx:id="rootNode" minHeight="1000.0" minWidth="1400.0" styleClass="base" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hva.fys.mercury.controllers.RootController">
    <top>
       <GridPane id="mainHeader" alignment="TOP_CENTER" styleClass="header" stylesheets="@../styles/Styles.css">
         <columnConstraints>
@@ -134,7 +134,6 @@
                                     <TextField fx:id="userTextField" onAction="#loginAction" promptText="UserName" />
                                  </children>
                               </HBox>
-                              <Button id="loginBtn" fx:id="loginButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#loginAction" prefHeight="41.0" prefWidth="453.0" stylesheets="@../styles/login.css" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                               <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
@@ -148,6 +147,16 @@
                               <HBox id="redHbox" prefHeight="20.0" prefWidth="382.0" GridPane.columnIndex="1" />
                               <HBox id="redHbox" prefHeight="20.0" prefWidth="382.0" />
                               <HBox id="redHbox" prefHeight="20.0" prefWidth="382.0" GridPane.columnIndex="2" />
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <Button id="loginBtn" fx:id="loginButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#loginAction" prefHeight="41.0" prefWidth="453.0" stylesheets="@../styles/login.css" text="Login" />
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button id="wachtwoordVergeten" fx:id="wachtwoordVergetenBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#wachtwoordVergetenAction" prefHeight="29.0" prefWidth="299.0" stylesheets="@../styles/login.css" text="Wachtwoord Vergeten?" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
                            </children>
                         </GridPane>
                      </children>
