@@ -26,9 +26,7 @@ public class MainApp extends Application {
         LoginController.locale = new Locale("en", "US");
         ResourceBundle bundle = ResourceBundle.getBundle("UIResources", LoginController.locale);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Login.fxml"), bundle);
-        Parent root = loader.load();
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Login.fxml"));
-//        Parent root = loader.load();
+        Parent root = loader.load(); 
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
         stage1.setTitle("Mercury");

@@ -16,9 +16,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="1098.0" xmlns="http://javafx.com/javafx/8.0.141" 
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="hva.fys.mercury.controllers.RegistreerVermistController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="1098.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hva.fys.mercury.controllers.RegistreerVermistController">
     <children>
         <ScrollPane>
             <content>
@@ -203,7 +201,10 @@
                                     </children>
                                 </GridPane>
                                 <Pane prefHeight="200.0" prefWidth="200.0" />
-                                <Pane prefHeight="200.0" prefWidth="200.0" />
+                                <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Button layoutX="121.0" layoutY="14.0" mnemonicParsing="false" onAction="#saveAsPDF" text="PDF" />
+                           </children></Pane>
                                 <GridPane prefHeight="58.0" prefWidth="224.0">
                                     <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

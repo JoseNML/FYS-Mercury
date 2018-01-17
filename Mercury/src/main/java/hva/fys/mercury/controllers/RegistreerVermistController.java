@@ -1,27 +1,35 @@
 package hva.fys.mercury.controllers;
 
+import Services.PdfCreator;
 import hva.fys.mercury.DAO.BagageDAO;
 import hva.fys.mercury.models.Bagage;
-import hva.fys.mercury.models.Reiziger; 
+import hva.fys.mercury.models.Reiziger;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML; 
-import javafx.fxml.Initializable; 
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.stage.FileChooser;
 
 /**
  * FXML Controller class die de vermiste bagage registreert
  *
  * @author Mitchell Wan
  */
-public class RegistreerVermistController implements Initializable  {
+public class RegistreerVermistController implements Initializable {
 
     Bagage bagage = new Bagage();
     Reiziger reiziger = new Reiziger();
@@ -74,12 +82,6 @@ public class RegistreerVermistController implements Initializable  {
     private GridPane BagageOpslaan;
 
     @FXML
-    private GridPane bagageOpslaanVerlorenPDF;
-
-    @FXML
-    private BagageOpslaanVerlorenPDFController bagageOpslaanVerlorenPDFController;
-
-    @FXML
     private Button opslaanBTN;
 
     @FXML
@@ -91,7 +93,7 @@ public class RegistreerVermistController implements Initializable  {
     private ParentControllerContext parentController;
 
     ResourceBundle RsBundle = ResourceBundle.getBundle("UIResources", LoginController.locale);
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         status.getItems().addAll(
@@ -300,7 +302,6 @@ public class RegistreerVermistController implements Initializable  {
         datumGevonden.getEditor().setDisable(false);
         datumGevonden.getEditor().setText("");
         annuleerText();
-        showFormulier();
     }
 
     /**
@@ -315,23 +316,24 @@ public class RegistreerVermistController implements Initializable  {
         enableFields();
         denyLabel.setText("");
         opgeslagenLabel.setText("");
-        showFormulier();
 
     }
 
-    /**
-     * geeft het pdf formulier weer
-     */
-    private void showPDF() {
-        this.bagageOpslaanVerlorenPDF.setVisible(true);
-        this.BagageOpslaan.setVisible(false);
+    @FXML
+    private void saveAsPDF(ActionEvent event) {
+        try {
+
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Sla formulier op.");
+            FileChooser.ExtensionFilter filter = new FileChooser.ExtensionFilter("PDF files (*.pdf)", "*.pdf");
+            fileChooser.getExtensionFilters().add(filter);
+            File file = fileChooser.showSaveDialog(BagageOpslaan.getScene().getWindow());
+            PdfCreator creator = new PdfCreator(reiziger, bagage, bagage.getIATA_Code());
+            creator.savePdf(file.getAbsolutePath(), LoginController.locale);
+
+        } catch (FileNotFoundException | MalformedURLException ex) {
+            Logger.getLogger(RegistreerVermistController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
-    /**
-     * geeft het registratie formulier weer
-     */
-    private void showFormulier() {
-        this.bagageOpslaanVerlorenPDF.setVisible(false);
-        this.BagageOpslaan.setVisible(true);
-    } 
 }
