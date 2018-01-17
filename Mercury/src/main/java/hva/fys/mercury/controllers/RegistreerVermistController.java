@@ -300,6 +300,7 @@ public class RegistreerVermistController implements Initializable {
         datumGevonden.getEditor().setDisable(false);
         datumGevonden.getEditor().setText("");
         annuleerText();
+        pdfBTN.setVisible(false);
     }
 
     /**
