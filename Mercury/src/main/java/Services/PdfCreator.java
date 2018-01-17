@@ -39,9 +39,9 @@ public class PdfCreator {
         PdfWriter writer = new PdfWriter(bestandsLocatie);
         PdfDocument pdfDoc = new PdfDocument(writer);
         Document document = new Document(pdfDoc);
-        if(locale.getCountry().equalsIgnoreCase("NL")){
-        document = makePDF(document);
-        }else{
+        if (locale.getCountry().equalsIgnoreCase("NL")) {
+            document = makePDF(document);
+        } else {
             document = makePDFinEng(document);
         }
         document.close();
@@ -58,14 +58,13 @@ public class PdfCreator {
         text.setTextAlignment(TextAlignment.CENTER);
         document.add(new Paragraph(text));
 
-        Paragraph etc = setLocDateInfo(LocalDate.now().toString(), LocalTime.now().toString());
+        Paragraph etc = setLocDateInfo(LocalDate.now().toString(), LocalTime.now().toString().substring(0, 5));
         document.add(etc);
 
         Table reizigerHeader = createHeader("Reiziger Informatie:");
-        document.add(reizigerHeader); 
+        document.add(reizigerHeader);
         Paragraph reizigerInfo = setReizigerInfo();
         document.add(reizigerInfo);
-
 
         Table bagageLabelHeader = createHeader("Bagage Label Informatie:");
         document.add(bagageLabelHeader);
@@ -89,7 +88,7 @@ public class PdfCreator {
         text.setTextAlignment(TextAlignment.CENTER);
         document.add(new Paragraph(text));
 
-        Paragraph etc = setLocDateInfoInENG(LocalDate.now().toString(), LocalTime.now().toString());
+        Paragraph etc = setLocDateInfoInENG(LocalDate.now().toString(), LocalTime.now().toString().substring(0, 5));
         document.add(etc);
 
         Table reizigerHeader = createHeader("Traveler Information:");
@@ -138,7 +137,7 @@ public class PdfCreator {
         bagageInf.add(String.format(PDF_FORMAT, "Merk:", bagage.getBagagemerk()));
         bagageInf.add(String.format(PDF_FORMAT, "Kleur 1:", bagage.getPrimaireKleur()));
         bagageInf.add(String.format(PDF_FORMAT, "Kleur 2:", bagage.getSecundaireKleur()));
-        bagageInf.add(String.format(PDF_FORMAT, "Bijzondere Kenmerken", bagage.getOverigeEigenschappen()));
+        bagageInf.add(String.format(PDF_FORMAT, "Bijzondere Kenmerken", bagage.getOverigeEigenschappen() + "\n\n"));
         return bagageInf;
     }
 
@@ -148,21 +147,21 @@ public class PdfCreator {
         bagageInf.add(String.format(PDF_FORMAT, "Brand:", bagage.getBagagemerk()));
         bagageInf.add(String.format(PDF_FORMAT, "Color 1:", bagage.getPrimaireKleur()));
         bagageInf.add(String.format(PDF_FORMAT, "Color 2:", bagage.getSecundaireKleur()));
-        bagageInf.add(String.format(PDF_FORMAT, "Special characteristics", bagage.getOverigeEigenschappen()));
+        bagageInf.add(String.format(PDF_FORMAT, "Special characteristics", bagage.getOverigeEigenschappen() + "\n\n"));
         return bagageInf;
     }
 
     private Paragraph setBagageLabelInfo() {
         Paragraph bagageLabelInf = new Paragraph();
         bagageLabelInf.add(String.format(PDF_FORMAT, "Label Nummer:", bagage.getBagagelabel()));
-        bagageLabelInf.add(String.format(PDF_FORMAT, "VluchtNummer:", bagage.getVluchtNummer()));
+        bagageLabelInf.add(String.format(PDF_FORMAT, "VluchtNummer:", bagage.getVluchtNummer() + "\n\n"));
         return bagageLabelInf;
     }
 
     private Paragraph setBagageLabelInfoENG() {
         Paragraph bagageLabelInf = new Paragraph();
         bagageLabelInf.add(String.format(PDF_FORMAT, "Label Number:", bagage.getBagagelabel()));
-        bagageLabelInf.add(String.format(PDF_FORMAT, "Flight Number:", bagage.getVluchtNummer()));
+        bagageLabelInf.add(String.format(PDF_FORMAT, "Flight Number:", bagage.getVluchtNummer() + "\n\n"));
         return bagageLabelInf;
     }
 
@@ -175,7 +174,7 @@ public class PdfCreator {
         reizigerInf.add(String.format(PDF_FORMAT, "Postcode:", reiziger.getVoornaam()));
         reizigerInf.add(String.format(PDF_FORMAT, "Land:", reiziger.getLand()));
         reizigerInf.add(String.format(PDF_FORMAT, "Telefoon:", reiziger.getTelefoonnummer()));
-        reizigerInf.add(String.format(PDF_FORMAT, "Email:", reiziger.getEmail()));
+        reizigerInf.add(String.format(PDF_FORMAT, "Email:", reiziger.getEmail() + "\n\n"));
         return reizigerInf;
     }
 
@@ -188,7 +187,7 @@ public class PdfCreator {
         reizigerInf.add(String.format(PDF_FORMAT, "Postal code:", reiziger.getVoornaam()));
         reizigerInf.add(String.format(PDF_FORMAT, "Country:", reiziger.getLand()));
         reizigerInf.add(String.format(PDF_FORMAT, "Phone:", reiziger.getTelefoonnummer()));
-        reizigerInf.add(String.format(PDF_FORMAT, "Email:", reiziger.getEmail()));
+        reizigerInf.add(String.format(PDF_FORMAT, "Email:", reiziger.getEmail() + "\n\n"));
         return reizigerInf;
     }
 
@@ -196,7 +195,7 @@ public class PdfCreator {
         Paragraph locDate = new Paragraph();
         locDate.add(String.format(PDF_FORMAT, "Datum:", datum));
         locDate.add(String.format(PDF_FORMAT, "Tijd:", tijd));
-        locDate.add(String.format(PDF_FORMAT, "Luchthaven:", huidigeIATA));
+        locDate.add(String.format(PDF_FORMAT, "Luchthaven:", huidigeIATA) + "\n\n");
         return locDate;
     }
 
@@ -204,7 +203,7 @@ public class PdfCreator {
         Paragraph locDate = new Paragraph();
         locDate.add(String.format(PDF_FORMAT, "Date:", datum));
         locDate.add(String.format(PDF_FORMAT, "Time:", tijd));
-        locDate.add(String.format(PDF_FORMAT, "Airport:", huidigeIATA));
+        locDate.add(String.format(PDF_FORMAT, "Airport:", huidigeIATA) + "\n\n");
         return locDate;
     }
 }
