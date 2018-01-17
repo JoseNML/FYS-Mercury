@@ -161,9 +161,7 @@
                            </children>
                         </GridPane>
                      </children>
-                  </GridPane>
-                  <fx:include fx:id="BagagePDFG" source="BagageOpslaanGevondenPDF.fxml" visible="false" /> 
-               </children>
+                  </GridPane> </children>
             </StackPane>
          </center>
          <bottom>

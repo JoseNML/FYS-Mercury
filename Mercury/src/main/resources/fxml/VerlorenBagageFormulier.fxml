@@ -244,9 +244,7 @@
                                         <Button id="opslaanBTN" fx:id="opslaanBTN" mnemonicParsing="false" onAction="#opslaanBagage" prefHeight="27.0" prefWidth="99.0" stylesheets="@../styles/registreervermist.css" text="%verloren.25" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
                                     </children>
-                                </GridPane>
-                                <!--<fx:include fx:id="bagageOpslaanVerlorenPDF" source="BagageOpslaanVerlorenPDF.fxml" visible="false" />--> 
-
+                                </GridPane> 
                             </children>
                         </HBox>
                     </bottom>
