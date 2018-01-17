@@ -6,6 +6,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -203,7 +205,14 @@
                                 <Pane prefHeight="200.0" prefWidth="200.0" />
                                 <Pane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="121.0" layoutY="14.0" mnemonicParsing="false" onAction="#saveAsPDF" text="PDF" />
+                              <Button fx:id="pdfBTN" contentDisplay="GRAPHIC_ONLY" layoutX="116.0" layoutY="14.0" mnemonicParsing="false" onAction="#saveAsPDF" prefHeight="9.0" prefWidth="50.0" text="PDF" visible="false">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/pdf-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
                            </children></Pane>
                                 <GridPane prefHeight="58.0" prefWidth="224.0">
                                     <columnConstraints>

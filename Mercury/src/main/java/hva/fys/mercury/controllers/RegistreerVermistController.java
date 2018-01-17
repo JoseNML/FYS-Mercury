@@ -89,9 +89,9 @@ public class RegistreerVermistController implements Initializable {
 
     @FXML
     private Label denyLabel;
-
-    private ParentControllerContext parentController;
-
+    @FXML
+    private Button pdfBTN;
+    
     ResourceBundle RsBundle = ResourceBundle.getBundle("UIResources", LoginController.locale);
 
     @Override
@@ -110,7 +110,7 @@ public class RegistreerVermistController implements Initializable {
                 RsBundle.getString("gevonden.13"),
                 RsBundle.getString("gevonden.14"),
                 RsBundle.getString("gevonden.15")
-        );
+        ); 
     }
 
     /**
@@ -252,10 +252,8 @@ public class RegistreerVermistController implements Initializable {
             denyLabel.setText("");
             dbBagage.registreerBagage(bagage);
             opgeslagenLabel.setText("Information succesfully saved!");
-            System.out.println("Gegevens zijn opgeslagen!");
-//            bagageOpslaanVerlorenPDFController.fillLabels
-//            bagageOpslaanVerlorenPDFController.setParentContext(this, bagage, reiziger);
-//            showPDF();
+            System.out.println("Gegevens zijn opgeslagen!");  
+        pdfBTN.setVisible(true);
         }
     }
 
@@ -319,6 +317,11 @@ public class RegistreerVermistController implements Initializable {
 
     }
 
+    /**
+     * Dit slaat het formulier op als een PDF bestand
+     *
+     * @param event
+     */
     @FXML
     private void saveAsPDF(ActionEvent event) {
         try {
