@@ -20,6 +20,11 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Locale;
 
+/**
+ * creërt een PDF bestand met informatie over de reiziger en de verloren bagage
+ *
+ * @author Mitchell Wan
+ */
 public class PdfCreator {
 
     private final String PDF_FORMAT = "%-80s %30s\n ";
@@ -35,6 +40,16 @@ public class PdfCreator {
 
     }
 
+    /**
+     *
+     * slaat het pdf bestand op
+     *
+     * @param bestandsLocatie de locatie van waar het bestand opgeslagen moet
+     * worden
+     * @param locale stelt de taal van het PDF bestand in
+     * @throws FileNotFoundException
+     * @throws MalformedURLException
+     */
     public void savePdf(String bestandsLocatie, Locale locale) throws FileNotFoundException, MalformedURLException {
         PdfWriter writer = new PdfWriter(bestandsLocatie);
         PdfDocument pdfDoc = new PdfDocument(writer);
@@ -47,6 +62,13 @@ public class PdfCreator {
         document.close();
     }
 
+    /**
+     * maakt het PDF bestand aan in het nederlands
+     *
+     * @param document een leeg pdf document
+     * @return het ingevulde pdf document
+     * @throws MalformedURLException
+     */
     private Document makePDF(Document document) throws MalformedURLException {
 
         Image img = new Image(ImageDataFactory.create(LOGO_IMAGE));
@@ -77,6 +99,13 @@ public class PdfCreator {
         return document;
     }
 
+    /**
+     * maakt het PDF bestand aan in het engels
+     *
+     * @param document een leeg pdf document
+     * @return het ingevulde pdf document
+     * @throws MalformedURLException
+     */
     private Document makePDFinEng(Document document) throws MalformedURLException {
 
         Image img = new Image(ImageDataFactory.create(LOGO_IMAGE));
